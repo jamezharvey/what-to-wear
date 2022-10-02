@@ -11,17 +11,30 @@ const Home = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Enter your city:
-        <input
-          type="text"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-      </label>
-      <input type="submit" />
-    </form>
+    <>
+    <div className="d-flex justify-content-center">
+    <div className="p-5 text-center">
+    <h1 className="mb-1">What To Wear</h1>
+    <h4 className="mb-1">By James Harvey</h4>
+    </div>
+    </div>
+    <div className="d-flex justify-content-center">
+          <form onSubmit={handleSubmit}>
+            <div className="text-center">
+          <input
+            class="form-control form-control-lg"
+            type="text"
+            placeholder="Where are you?"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            />
+            </div>
+            <div className="text-center">
+                <input className="btn btn-dark btn-lg mt-2" type="submit" value="Submit"/>
+            </div>
+          </form>
+        </div>
+    </>
   );
 };
 
