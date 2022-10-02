@@ -1,5 +1,6 @@
 export const weather_condition = {
   "Sunny": "Ooh a sunny one, ",
+  "Clear":"Ooh a clear night, ",
   "Partly cloudy": "There might be some sun but ",
   "Cloudy": "Typical, ",
   "Overcast": "Typical, ",
