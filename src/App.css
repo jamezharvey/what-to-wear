@@ -57,3 +57,12 @@ nav ul li {
   font-weight: bold;
   font-family: "Noto Sans Mono";
 }
+
+#button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*white text*/
+  font-weight: bold
+}
