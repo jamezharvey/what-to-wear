@@ -30,7 +30,7 @@ const Home = () => {
             />
             </div>
             <div className="text-center">
-                <input className="btn btn-dark btn-lg mt-2" type="submit" value="Submit"/>
+                <input className="btn btn-dark btn-lg mt-3" type="submit" value="Submit"/>
             </div>
           </form>
         </div>
