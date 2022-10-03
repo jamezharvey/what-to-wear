@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const weatherApi = axios.create({
-  baseURL: `https://api.weatherapi.com/v1/current.json?key=e6a9f41a8abc4043922184923220210&q=`,
+  baseURL: `https://api.weatherapi.com/v1/current.json?key=72a7b41878da429fb3d221652220310&q=`,
 });
 
 export const getWeather = (searchTerm) => {
