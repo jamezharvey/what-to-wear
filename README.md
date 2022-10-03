@@ -4,7 +4,6 @@ A fun weekend project using [weatherAPI](https://www.weatherapi.com/), [React](h
 
 If you would like to to view a hosted version, please click [here](https://ephemeral-jalebi-3cacec.netlify.app/)
 
-
 ## Setup
 
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/)
@@ -22,6 +21,7 @@ If you would like to to view a hosted version, please click [here](https://ephem
    ```bash
    $ npm install
    ```
+
 5. Run the app
 
    ```bash

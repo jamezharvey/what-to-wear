@@ -6,7 +6,6 @@ const weatherApi = axios.create({
 
 export const getWeather = (searchTerm) => {
   return weatherApi.get(`${searchTerm}&days=1`).then(({ data }) => {
-    console.log(data.current)
-    return data.current;
+    return data;
   });
 };
