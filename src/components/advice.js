@@ -10,18 +10,25 @@ import "../App.css";
 const Advice = () => {
   const [weather, setWeather] = useState("");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
   const { city } = useParams();
 
   useEffect(() => {
-    getWeather(city).then((weatherFromApi) => {
-      console.log(city);
-      setWeather(weatherFromApi);
-      setLoading(false);
-    });
+    const getData = async () => {
+      try {
+        const { current } = await getWeather(city); // Instead of await getWeather(city).then((weatherFromApi) =>  setWeather(weatherFromApi). I destructured {current} which is the useful block of information from the API
+        setWeather(current);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+    getData();
   }, [city]);
 
   if (!loading) {
-    if (weather) {
+    if (!error) {
       return (
         <>
           <div className="d-flex justify-content-center">
@@ -66,7 +73,13 @@ const Advice = () => {
       );
     }
   } else {
-    return <div>Loading...</div>;
+    return (
+      <div className="d-flex justify-content-center">
+        <h1 className="weather_condition" id="hello">
+          loading...
+        </h1>
+      </div>
+    );
   }
 };
 
